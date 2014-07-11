@@ -3,12 +3,14 @@ class InputOutput
 
   def initialize
 
+    @parse = Parse.new
+
+
   end
 
   def input
 
-    Kernel.gets
-   # @parse.extract_operator
+    @parsed_input = @parse.input (Kernel.gets)
 
   end
 
@@ -19,3 +21,4 @@ class InputOutput
    end
 
 end
+

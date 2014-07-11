@@ -1,55 +1,27 @@
 # Takes input value and performs appropriate function
 class Calculator
 
-  def initialize (value)
+  def initialize initial_state=0
 
-    @input = value
-    @current_value = 0
+    @current_value = initial_state
   end
 
 
-  # def extract_operator
-  #
-  #
-  #   if @input.include? "add"
-  #
-  #     self.add
-  #
-  #    elsif @input.include? "subtract"
-  #
-  #       self.subtract
-  #
-  #    elsif @input.include? "multiply"
-  #
-  #      self.multiply
-  #
-  #    elsif @input.include? "cancel"
-  #
-  #       self.cancel
-  #
-  #    elsif @input.include? "exit"
-  #
-  #      self.exit
-  #
-  #    end
-  #
-  # end
+  def add input
 
-  def add
-
-    @current_value + @input
+    @current_value + input
 
   end
 
-  def subtract
+  def subtract input
 
-    @current_value - @input
+    @current_value - input
 
   end
 
-  def multiply
+  def multiply input
 
-    @current_value * @input
+    @current_value * input
 
   end
 
@@ -58,11 +30,5 @@ class Calculator
     @current_value = 0
 
   end
-
-   def exit
-
-    Process.exit
-
-   end
 
 end

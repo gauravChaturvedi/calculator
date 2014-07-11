@@ -1,52 +1,25 @@
 #Parse class parses the identifies the operand and the operator from the input string.
 class Parse
 
-  def initialize (value)
+  def initialize
 
-    @input = value
-    @operand = value.scan(/\d/)[0].to_i
 
-  end
-  #
-  # def extract_operation
-  #
-  #
-  #
-  # end
-
-  def extract_operator
-
-     calculator = Calculator.new(@operand)
-
-    if @input.include? "add"
-
-      calculator.add
-
-    elsif @input.include? "subtract"
-
-      calculator.subtract
-
-    elsif @input.include? "multiply"
-
-      calculator.multiply
-
-    elsif @input.include? "cancel"
-
-      calculator.cancel
-
-    elsif @input.include? "exit"
-
-      Process.exit
-
-    end
-
+    @router = Router.new
 
   end
 
-  # def extract_operand
-  #
-  #   @operand
-  #
-  # end
+  def input (value)
+
+    #@input = value
+    #operand = value.scan(/\d/)[0].to_i
+    value = value.split
+    operator, operand = value[0], value[1].to_i
+    operation operator, operand
+  end
+
+  def operation operator, operand
+    @router.operation operator, operand
+  end
+
 
 end
