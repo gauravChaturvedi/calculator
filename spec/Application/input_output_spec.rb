@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'Input Output' do
 
   it 'check whether input received in console' do
-      io_operation = InputOutput.new()
+      io_operation = InputOutput.new
       expect(Kernel).to receive(:gets)
-      io_operation.input()
+      io_operation.user_input
 
   end
 

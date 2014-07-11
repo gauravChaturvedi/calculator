@@ -9,19 +9,19 @@ class Calculator
 
   def add input
 
-    @current_value + input
+    @current_value += input
 
   end
 
   def subtract input
 
-    @current_value - input
+    @current_value -= input
 
   end
 
   def multiply input
 
-    @current_value * input
+    @current_value *= input
 
   end
 

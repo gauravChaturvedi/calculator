@@ -1,4 +1,5 @@
 #It passes the control to calculator and IO class as and when required
+require_relative 'calculator'
 class Router
 
   def initialize
@@ -30,6 +31,9 @@ class Router
       when "exit"
 
         exit_method
+
+      else
+        "Wrong command"
 
     end
   end
