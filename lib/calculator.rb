@@ -38,6 +38,7 @@ class Calculator
   def add
 
     @current_value + @input
+
   end
 
   def subtract

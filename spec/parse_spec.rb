@@ -30,14 +30,14 @@ describe 'Parser' do
     #   expect(parser.extract_operator).to eq(5)
     # end
 
-    # it 'should return exit the calculator on input exit' do
-    #
-    #   allow(Kernel).to receive(:exit)
-    #   expect(Process).to receive(:exit)
-    #   calculator = Calculator.new("exit")
-    #   calculator.extract_operator
-    #
-    # end
+     it 'should return exit the calculator on input exit' do
+
+       allow(Kernel).to receive(:exit)
+       expect(Process).to receive(:exit)
+       parse = Parse.new("exit")
+       parse.extract_operator
+
+     end
 
 
     # it 'should return 5 on input add 5' do

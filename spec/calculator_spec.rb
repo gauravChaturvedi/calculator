@@ -2,27 +2,33 @@ require 'spec_helper'
 
 describe 'Calculator ' do
 
-  it 'should add 5 on input 5' do
+  Context ' Operators' do
 
-    calculator = Calculator.new(5)
-    expect(calculator.add).to eq(5)
+            it 'should add 5 on input 5' do
 
-  end
+              calculator = Calculator.new(5)
+              expect(calculator.add).to eq(5)
+
+            end
 
 
-  it 'should return -2 on input 2' do
 
-    calculator = Calculator.new(2)
-    expect(calculator.subtract).to eq(-2)
 
-  end
+            it 'should return -2 on input 2' do
 
-  it 'should return 0 on input 4' do
+              calculator = Calculator.new(2)
+              expect(calculator.subtract).to eq(-2)
 
-    calculator = Calculator.new(4)
-    expect(calculator.multiply).to eq(0)
+            end
 
-  end
+            it 'should return 0 on input 4' do
+
+              calculator = Calculator.new(4)
+              expect(calculator.multiply).to eq(0)
+
+            end
+
+    end
 
   # it 'should return 0 on input cancel' do
   #

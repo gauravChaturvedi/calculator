@@ -7,6 +7,12 @@ class Parse
     @operand = value.scan(/\d/)[0].to_i
 
   end
+  #
+  # def extract_operation
+  #
+  #
+  #
+  # end
 
   def extract_operator
 
@@ -28,11 +34,12 @@ class Parse
 
       calculator.cancel
 
-   # elsif @input.include? "exit"
+    elsif @input.include? "exit"
 
-    #  calculator.exit
+      Process.exit
 
     end
+
 
   end
 
